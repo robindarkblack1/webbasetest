@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YouTube Video Downloader - MyDOwnload</title>
+    <link rel="stylesheet" href="css/ytd.css">
+  </head>
+  <body>
+    <h1>YouTube Video Downloader</h1>
+    <form method="post" action="download.php">
+      <label for="url">Enter YouTube video URL:</label>
+      <input type="text" name="url" id="url" required><br><br>
+      <label for="format">Select file format:</label>
+      <select name="format" id="format">
+        <option value="mp4">MP4</option>
+        <option value="mp3">MP3</option>
+      </select><br><br>
+      <div id="mp4-options">
+        <label for="resolution">Select video resolution:</label>
+        <select name="resolution" id="resolution">
+          <option value="720p">720p</option>
+          <option value="480p">480p</option>
+          <option value="360p">360p</option>
+        </select><br><br>
+        <label for="video-bitrate">Select video bitrate:</label>
+        <select name="video-bitrate" id="video-bitrate">
+          <option value="1m">1 Mbps</option>
+          <option value="2m">2 Mbps</option>
+          <option value="4m">4 Mbps</option>
+        </select><br><br>
+        <label for="subtitles">Include subtitles:</label>
+        <input type="checkbox" name="subtitles" id="subtitles"><br><br>
+        <label for="thumbnail">Download thumbnail:</label>
+        <input type="checkbox" name="thumbnail" id="thumbnail"><br><br>
+      </div>
+      <div id="mp3-options" style="display: none;">
+        <label for="audio-bitrate">Select audio bitrate:</label>
+        <select name="audio-bitrate" id="audio-bitrate">
+          <option value="128k">128 kbps</option>
+          <option value="256k">256 kbps</option>
+          <option value="320k">320 kbps</option>
+        </select><br><br>
+      </div>
+      <input type="submit" value="Download">
+    </form>
+    <script>
+      var format = document.getElementById("format");
+      var mp4Options = document.getElementById("mp4-options");
+      var mp3Options = document.getElementById("mp3-options");
+
+      format.addEventListener("change", function() {
+        if (format.value === "mp4") {
+          mp4Options.style.display = "block";
+          mp3Options.style.display = "none";
+        } else if (format.value === "mp3") {
+          mp4Options.style.display = "none";
+          mp3Options.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

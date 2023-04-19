@@ -1,0 +1,268 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #008080;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contact form styles */
+.contact {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.contact h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #008080;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #006666;
+}
+/* Footer styles */
+footer {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footer-section {
+  flex-basis: 30%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.footer-section.about {
+  flex-basis: 40%;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+}
+
+.logo-text a {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.socials a {
+  background-color: #eee;
+  border-radius: 50%;
+  color: #333;
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 40px;
+}
+
+.socials a:hover {
+  transform: translateY(-5px);
+}
+
+.footer-section.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section.links li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.contact span {
+  flex-basis: 50%;
+}
+
+.contact i {
+  margin-right: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.btn {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.btn-big {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+}

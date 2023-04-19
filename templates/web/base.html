@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %}</title>
+    {% block link %}
+    {% endblock link %}
+
+</head>
+
+<body>
+    {% block body %}
+
+    {% endblock body %}
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2 class="logo-text"><a href="/">MyDownload</a></h2>
+                    <p>Online Tools is a web-based application that provides a range of useful tools for everyday tasks.
+                    </p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> &nbsp; 123-456-7890</span>
+                        <span><i class="fas fa-envelope"></i> &nbsp; robin.upcloud.in</span>
+                    </div>
+                    <div class="socials">
+                        <a href="https://robinhod.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/tools">Tools</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="#" method="post">
+                        <input type="email" name="email" class="text-input contact-input"
+                            placeholder="Your email address...">
+                        <textarea name="message" class="text-input contact-input"
+                            placeholder="Your message..."></textarea>
+                        <button type="submit" class="btn btn-big contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 MyDownload | Designed by PARDEEP</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

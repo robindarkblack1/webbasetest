@@ -1,0 +1,85 @@
+{% extends 'web/base.html' %}
+
+{% block title %}
+  MyDownload
+{% endblock title %}
+{% block link %}
+  
+<link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')}}" >
+    <script src="toolsweb/landing.js"></script>
+
+{% endblock link %}
+
+
+{% block body %}
+  
+
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#">
+            <img src="static/img/logo.png" alt="MyDownload" width="200px" height="50px">
+          </a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/signup" class="cta-btn">Create New Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Get things done with our online tools</h1>
+          <p>Choose from a variety of web-based applications that perform various tasks.</p>
+          <a href="/login" class="button">Get started</a>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <h2>Our Features</h2>
+          <div class="feature-item">
+            <img src="static/img/ig.svg" alt="Icon 1" />
+            <h3>Insta video Downloader</h3>
+            <p>download videoos free</p>
+            <button class="button-f" onclick="window.open('toolsweb/wt/igt.html', '_blank');">Click me!</button>
+
+          </div>
+          <div class="feature-item">
+            <img src="static/img/yt.svg" alt="Icon 2" />
+            <h3>Youtube video Downloader</h3>
+            <p>Description of Feature 2.</p>
+            <button class="button-f" onclick="window.open('toolsweb/ytd.html', '_blank');">Click me!</button>
+          </div>
+          <div class="feature-item">
+            <img src="icon-3.png" alt="Icon 3" />
+            <h3>Feature 3</h3>
+            <p>Description of Feature 3.</p>
+            <button class="button-f" onclick="window.open('tools.html', '_blank');">Use Now</button>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="container">
+          <h2>What Our Customers Say</h2>
+          <div class="testimonial-item">
+            <p>"Testimonial from a happy customer."</p>
+            <h4>Customer Name</h4>
+          </div>
+          <div class="testimonial-item">
+            <p>"Another testimonial from a happy customer."</p>
+            <h4>Customer Name</h4>
+          </div>
+        </div>
+      </section>
+      <section class="call-to-action">
+        <div class="container">
+          <h2>Ready to get started?</h2>
+          <a href="/signup" class="button">Create an account</a>
+        </div>
+      </section>
+    </main>
+    {% endblock body %}
+   

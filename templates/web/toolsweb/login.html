@@ -1,0 +1,44 @@
+{% extends 'web/base.html' %}
+
+{% block title %}
+MyDownload - Login
+{% endblock title %}
+{% block link %}
+
+<link rel="stylesheet" href="{{  url_for('static', filename='css/login.css')}}">
+<script src="toolsweb/landing.js"></script>
+
+{% endblock link %}
+{% block body %}
+
+<header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+      <a class="cta-btn" href="/signup">Signup</a>
+    </nav>
+  </div>
+</header>
+
+<section class="login">
+  <div class="container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+  </div>
+</section>
+
+{% endblock body %}
