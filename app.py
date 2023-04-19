@@ -27,6 +27,3 @@ def contact():
 @app.route('/login')
 def login():
     return render_template('web/toolsweb/login.html')
-
-if __name__ == "__main__":
-    app.run()
