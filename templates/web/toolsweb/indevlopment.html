@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Under Construction</title>
+	<style>
+		body {
+			background: #000;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			z-index: 1;
+			color: #fff;
+			font-family: sans-serif;
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		.background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+		.animation {
+			animation: background 30s ease infinite;
+			background-color: #000;
+			background-size: cover;
+			background-position: center;
+			opacity: 0.8;
+		}
+
+		@keyframes background {
+			from {
+				transform: scale(1);
+			}
+
+			to {
+				transform: scale(1.2);
+			}
+		}
+
+		body {
+			background: black;
+			overflow: hidden;
+		}
+		
+		.star {
+			position: absolute;
+			border-radius: 50%;
+			background-color: white;
+			opacity: 0.5;
+			transform: scale(0);
+			animation: twinkle 2s infinite;
+		}
+		
+		#star1 {
+			top: 15%;
+			left: 20%;
+			width: 8px;
+			height: 8px;
+			animation-delay: 0s;
+		}
+		
+		#star2 {
+			top: 70%;
+			left: 60%;
+			width: 10px;
+			height: 10px;
+			animation-delay: 1s;
+		}
+		
+		#star3 {
+			top: 50%;
+			left: 80%;
+			width: 6px;
+			height: 6px;
+			animation-delay: 2s;
+		}
+		
+		#star4 {
+			top: 30%;
+			left: 40%;
+			width: 12px;
+			height: 12px;
+			animation-delay: 3s;
+		}
+		
+		#star5 {
+			top: 80%;
+			left: 20%;
+			width: 9px;
+			height: 9px;
+			animation-delay: 4s;
+		}
+		
+		#star6 {
+			top: 10%;
+			left: 70%;
+			width: 7px;
+			height: 7px;
+			animation-delay: 5s;
+		}
+		
+		#star7 {
+			top: 90%;
+			left: 30%;
+			width: 11px;
+			height: 11px;
+			animation-delay: 6s;
+		}
+		
+		#star8 {
+			top: 60%;
+			left: 10%;
+			width: 8px;
+			height: 8px;
+			animation-delay: 7s;
+		}
+		
+		#star9 {
+			top: 20%;
+			left: 90%;
+			width: 14px;
+			height: 14px;
+			animation-delay: 8s;
+		}
+		
+		@keyframes twinkle {
+			0% {
+				transform: scale(0);
+				opacity: 0.5;
+			}
+			30% {
+				transform: scale(1);
+				opacity: 1;
+			}
+			100% {
+				transform: scale(0);
+				opacity: 0.5;
+			}
+		}
+	
+	</style>
+</head>
+<body>
+    <div class="star" id="star1"></div>
+	<div class="star" id="star2"></div>
+	<div class="star" id="star3"></div>
+	<div class="star" id="star4"></div>
+	<div class="star" id="star5"></div>
+	<div class="star" id="star6"></div>
+	<div class="star" id="star7"></div>
+	<div class="star" id="star8"></div>
+	<div class="star" id="star9"></div>
+	<div class="background animation"></div>
+	<div class="container">
+		<h1>Under Construction</h1>
+		<p>Our website is currently under construction. Check back soon for updates!</p>
+	</div>
+</body>
+</html>

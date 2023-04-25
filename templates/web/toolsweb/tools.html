@@ -1,0 +1,60 @@
+{% extends 'web/base.html' %}
+
+
+{% block title %}
+  MyDownload - Tools
+{% endblock title %}
+{% block link %}
+  
+<link rel="stylesheet" href="{{  url_for('static', filename='css/tools.css')}}" >
+    <script src="toolsweb/landing.js"></script>
+
+{% endblock link %}
+
+
+{% block body %}
+
+
+<header>
+		<h1>Web Tools</h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/tools">Tools</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Tools</h2>
+			<div class="tool-grid">
+				<div class="tool">
+					<a href="#">
+						<img src="https://picsum.photos/id/1018/400/400" alt="Tool 1">
+						<button class="button-f" onclick="window.open('wt/ic.html', '_blank');">Img compresser</button>
+					</a>
+				</div>
+				<div class="tool">
+					<a href="#">
+						<img src="https://picsum.photos/id/1015/400/400" alt="Tool 2">
+						<h3>Tool 2</h3>
+					</a>
+				</div>
+				<div class="tool">
+					<a href="#">
+						<img src="https://picsum.photos/id/1024/400/400" alt="Tool 3">
+						<h3>Tool 3</h3>
+					</a>
+				</div>
+				<div class="tool">
+					<a href="#">
+						<img src="https://picsum.photos/id/1032/400/400" alt="Tool 4">
+						<h3>Tool 4</h3>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+  {% endblock body %}

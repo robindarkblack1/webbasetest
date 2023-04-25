@@ -1,0 +1,264 @@
+body {
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2, p {
+    text-align: center;
+    color: #555;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #333;
+    outline: none;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #090808;
+  }
+  
+  /* Animated background */
+  
+  .container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bg-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .bg-circles:before,
+  .bg-circles:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: pulse 4s infinite ease-in-out;
+  }
+  
+  .bg-circles:before {
+    top: 25%;
+    left: 20%;
+    background: #ffcd4e;
+  }
+  
+  .bg-circles:after {
+    top: 75%;
+    right: 10%;
+    background: #ff718d;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+  }
+
+  
+footer {
+    margin-top: 100px;
+    
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #11ff00;
+    text-decoration: none;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .footer-section {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .footer-section.about {
+    flex-basis: 40%;
+  }
+  
+  .footer-section h2 {
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section h2:hover {
+    color: #26ff00;
+  
+  }
+  
+  .logo-text a {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .socials a {
+    background-color: #000000;
+    border-radius: 50%;
+    color: #333;
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 40px;
+  }
+  
+  .socials a:hover {
+    transform: translateY(-5px);
+    color: #63ff09;
+  }
+  
+  .footer-section.links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-section.links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section.links a:hover {
+    text-decoration: none;
+  }
+  
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  
+  .contact span {
+    flex-basis: 50%;
+  }
+  
+  .contact i {
+    margin-right: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .btn {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .btn-big {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+  
+  

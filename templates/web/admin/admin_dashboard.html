@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <style>body {
+        background-color: #f0f2f5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+      
+      header {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      nav li {
+        margin-right: 20px;
+      }
+      
+      nav a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+        transition: color 0.3s;
+      }
+      
+      nav a:before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #333;
+        transition: width 0.3s;
+      }
+      
+      nav a:hover:before {
+        width: 100%;
+      }
+      
+      nav a:hover {
+        color: #555;
+      }
+      
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      main h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      main p {
+        font-size: 20px;
+        color: #555;
+        text-align: center;
+      }
+      
+      footer {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      }
+      
+      footer p {
+        margin: 0;
+        font-size: 16px;
+        color: #555;
+      }
+      
+      nav a i {
+        margin-right: 5px;
+      }
+      
+      nav a.dashboard i {
+        background-color: #f7a83e;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      
+      nav a.database i {
+        background-color: #4e73df;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      
+      nav a.users i {
+        background-color: #1cc88a;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      
+      nav a.settings i {
+        background-color: #36b9cc;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      </style>
+  </head>
+  <body>
+    <header>
+      <h1>Admin Panel</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Control Database</a></li>
+          <li><a href="#">Manage Users</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="/logout_admin">logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Welcome to the Admin Panel</h2>
+      <p>Choose an option from the navigation menu above to get started.</p>
+    </main>
+    <footer>
+      <p>Copyright © 2023</p>
+    </footer>
+  </body>
+</html>
+

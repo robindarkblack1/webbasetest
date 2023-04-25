@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YouTube Video Downloader - MyDOwnload</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/ytd.css')}}">
+  </head>
+  <body>
+    <h1>YouTube Video Downloader</h1>
+    <form method="POST" action="/download">
+      <label for="url">Enter Instagram video URL:</label>
+      <input type="text" name="post_url" id="url" required><br><br>
+      <input type="submit" value="Download">
+    </form>
+  </body>
+</html>

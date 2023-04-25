@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyDOwnload - Verify</title>
+    <script src="https://kit.fontawesome.com/74cc53cc0b.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{  url_for('static', filename='css/verify.css')}}" >
+    <script src="toolsweb/landing.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="bg-circles"></div>
+  <h2>Verify Your Email</h2>
+  <p>A verification code has been sent to your email address. Please enter the code below to verify your email.</p>
+  <form method="POST">
+    <div class="form-group">
+      <label for="otp">Verification Code</label>
+      <input type="text" class="form-control" id="otp" name="otp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+  </form>
+  <footer>
+        
+    <div class="container">
+        <div class="footer-content"> 
+            <div class="footer-section about">
+                <h2 class="logo-text"><a href="/">MyDownload</a></h2>
+                <p>Online Tools is a web-based application that provides a range of useful tools for everyday tasks.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; 123-456-7890</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; mydownload.tech</span>
+                </div>
+                <div class="socials">
+                    <a href="https://robinhod.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+  
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+  
+          
+        </div>
+  
+        <div class="footer-bottom">
+            <p>&copy; 2023 MyDownload | Designed by PARDEEP</p>
+        </div>
+    </div>
+  </footer>
+</div>
+
+</body>

@@ -1,0 +1,188 @@
+{% extends 'web/base.html' %}
+
+{% block title %}
+  MyDownload
+{% endblock title %}
+{% block link %}
+  
+<link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')}}" >
+    <script src="toolsweb/landing.js"></script>
+
+{% endblock link %}
+
+
+{% block body %}
+
+
+ 
+    <header>
+      <div class="container">
+        <nav>
+         
+            <img src="static/img/brand.png" alt="MyDownload" width="200px" height="60px">
+          
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="tooltip">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login" class="cta-btn">Log In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        
+        <div class="container">
+          <canvas id="myCanvas"></canvas>
+          <h1>Get things done with our online tools</h1>
+          <p>Choose from a variety of web-based applications that perform various tasks.</p>
+          <a href="/signup" ><button class="button">Get started</button></a> 
+           
+
+
+         
+        </div>
+      </section>
+      <script>// set canvas width and height
+        var canvas = document.getElementById('myCanvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // get canvas context
+        var ctx = canvas.getContext('2d');
+        
+        // set dots properties
+        var dots = [];
+        var numDots = 200;
+        var dotRadius = 2;
+        var maxDistance = 70;
+        var greenLines = [];
+        
+        // create dots
+        for (var i = 0; i < numDots; i++) {
+            dots.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 1,
+                vy: (Math.random() - 0.5) * 1
+            });
+        }
+        
+        // draw dots and lines
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            // draw green lines between nearby dots
+            for (var i = 0; i < dots.length; i++) {
+                var nearbyDots = [];
+                for (var j = 0; j < dots.length; j++) {
+                    if (i !== j) {
+                        var distance = Math.sqrt((dots[i].x - dots[j].x)**2 + (dots[i].y - dots[j].y)**2);
+                        if (distance <= maxDistance) {
+                            nearbyDots.push(j);
+                        }
+                    }
+                }
+                if (nearbyDots.length >= 4) {
+                    for (var k = 0; k < nearbyDots.length; k++) {
+                        var j = nearbyDots[k];
+                        var distance = Math.sqrt((dots[i].x - dots[j].x)**2 + (dots[i].y - dots[j].y)**2);
+                        if (distance <= maxDistance) {
+                            greenLines.push([dots[i].x, dots[i].y, dots[j].x, dots[j].y]);
+                            if (greenLines.length > 100) {
+                                greenLines.shift();
+                            }
+                        }
+                    }
+                }
+            }
+        
+            // draw green lines
+            ctx.beginPath();
+            ctx.strokeStyle = '#00FF00';
+            ctx.lineWidth = 0.3;
+            for (var i = 0; i < greenLines.length; i++) {
+                ctx.moveTo(greenLines[i][0], greenLines[i][1]);
+                ctx.lineTo(greenLines[i][2], greenLines[i][3]);
+            }
+            ctx.stroke();
+        
+            // draw dots
+            for (var i = 0; i < dots.length; i++) {
+                ctx.beginPath();
+                ctx.arc(dots[i].x, dots[i].y, dotRadius, 0, Math.PI * 2);
+                ctx.fillStyle = '#00FF00';
+                ctx.fill();
+                dots[i].x += dots[i].vx;
+                dots[i].y += dots[i].vy;
+        
+                // bounce dots off walls
+                if (dots[i].x < 0 || dots[i].x > canvas.width) {
+                    dots[i].vx *= -1;
+                }
+                if (dots[i].y < 0 || dots[i].y > canvas.height) {
+                    dots[i].vy *= -1;
+                }
+            }
+        
+            requestAnimationFrame(draw);
+        }
+        
+        draw();
+        </script>
+
+
+      <section class="features">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+        <div id="stars5"></div>
+        <div id="stars6"></div>
+        <div class="container">
+          <h2>Our Features</h2>
+          <div class="feature-item">
+            <img src="static/img/ig.svg" alt="Icon 1" />
+            <h3>Insta video Downloader</h3>
+            <p>download videoos free</p>
+            <button class="button-f" onclick="window.open('/Insta-video-download', '_blank');">Free Download</button>
+
+          </div>
+          <div class="feature-item">
+            <img src="static/img/yt.svg" alt="Icon 2" />
+            <h3>Youtube video Downloader</h3>
+            <p>Description of Feature 2.</p>
+            <button class="button-f" onclick="window.open('Youtube-video-download', '_blank');">Click me!</button>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <section class="testimonials">
+        
+        <div class="container">
+          <h2>What Our Customers Say</h2>
+          <div class="testimonial-item">
+            <p>"Testimonial from a happy customer."</p>
+            <h4>Customer Name</h4>
+          </div>
+          <div class="testimonial-item">
+            <p>"Another testimonial from a happy customer."</p>
+            <h4>Customer Name</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="call-to-action">
+        <div class="container">
+          <h2>Ready to get started?</h2>
+          <a href="/signup" class="button">Create an account</a>
+        </div>
+      </section>
+
+    </main>
+    {% endblock body %}
+   

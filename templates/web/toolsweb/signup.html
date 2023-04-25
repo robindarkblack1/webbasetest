@@ -1,0 +1,141 @@
+
+{% extends 'web/base.html' %}
+
+{% block title %}
+MyDownload - Signup
+{% endblock title %}
+{% block link %}
+  
+<link rel="stylesheet" href="{{  url_for('static', filename='css/signup.css')}}" >
+    <script src="toolsweb/landing.js"></script>
+
+{% endblock link %}
+
+
+   {% block body %}
+  
+   <canvas id="myCanvas"></canvas>
+ <script>// set canvas width and height
+  var canvas = document.getElementById('myCanvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  // get canvas context
+  var ctx = canvas.getContext('2d');
+  
+  // set dots properties
+  var dots = [];
+  var numDots = 200;
+  var dotRadius = 2;
+  var maxDistance = 70;
+  var greenLines = [];
+  
+  // create dots
+  for (var i = 0; i < numDots; i++) {
+      dots.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 1,
+          vy: (Math.random() - 0.5) * 1
+      });
+  }
+  
+  // draw dots and lines
+  function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+      // draw green lines between nearby dots
+      for (var i = 0; i < dots.length; i++) {
+          var nearbyDots = [];
+          for (var j = 0; j < dots.length; j++) {
+              if (i !== j) {
+                  var distance = Math.sqrt((dots[i].x - dots[j].x)**2 + (dots[i].y - dots[j].y)**2);
+                  if (distance <= maxDistance) {
+                      nearbyDots.push(j);
+                  }
+              }
+          }
+          if (nearbyDots.length >= 4) {
+              for (var k = 0; k < nearbyDots.length; k++) {
+                  var j = nearbyDots[k];
+                  var distance = Math.sqrt((dots[i].x - dots[j].x)**2 + (dots[i].y - dots[j].y)**2);
+                  if (distance <= maxDistance) {
+                      greenLines.push([dots[i].x, dots[i].y, dots[j].x, dots[j].y]);
+                      if (greenLines.length > 100) {
+                          greenLines.shift();
+                      }
+                  }
+              }
+          }
+      }
+  
+      // draw green lines
+      ctx.beginPath();
+      ctx.strokeStyle = '#00FF00';
+      ctx.lineWidth = 0.3;
+      for (var i = 0; i < greenLines.length; i++) {
+          ctx.moveTo(greenLines[i][0], greenLines[i][1]);
+          ctx.lineTo(greenLines[i][2], greenLines[i][3]);
+      }
+      ctx.stroke();
+  
+      // draw dots
+      for (var i = 0; i < dots.length; i++) {
+          ctx.beginPath();
+          ctx.arc(dots[i].x, dots[i].y, dotRadius, 0, Math.PI * 2);
+          ctx.fillStyle = '#00FF00';
+          ctx.fill();
+          dots[i].x += dots[i].vx;
+          dots[i].y += dots[i].vy;
+  
+          // bounce dots off walls
+          if (dots[i].x < 0 || dots[i].x > canvas.width) {
+              dots[i].vx *= -1;
+          }
+          if (dots[i].y < 0 || dots[i].y > canvas.height) {
+              dots[i].vy *= -1;
+          }
+      }
+  
+      requestAnimationFrame(draw);
+  }
+  
+  draw();
+  </script>
+   <header>
+    <div class="container">
+      <nav>
+        <a href="#">
+          <img src="static/img/brand.png" alt="MyDownload" width="200px" height="60px">
+        </a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login" class="cta-btn">Log In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+   
+
+    <section class="signup">
+      <div class="container">
+        <h2>Create New Account</h2>
+        <form method="POST" action="/newuser">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Log in here</a></p>
+      </div>
+    
+    </section>
+    {% endblock body %}
